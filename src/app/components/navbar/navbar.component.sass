@@ -1,0 +1,43 @@
+#navbar
+  position: fixed
+  background-color: var(--bluegray-900  )
+  width: 100%
+  height: 60px
+  z-index: 100
+  display: flex
+
+#navlist
+  list-style-type: none
+  margin: auto 0px
+  overflow: hidden
+  display: inline
+
+#navcontent
+  width: 100%
+  height: 100%
+
+.nav-link
+  float: left
+  height: 100%
+  margin-right: 12px
+
+.nav-link a
+  display: block
+  color: white
+  text-align: center
+  padding: 18px 16px
+  text-decoration: none
+  height: 100%
+  border-bottom: 8px solid var(--bluegray-600)
+
+.nav-link a:hover:not(.active)
+  background-color: var(--bluegray-800)
+
+.nav-link-active
+  background-color: var(--bluegray-700)
+
+.float-right
+  float: right
+
+#langbtn
+  margin-right: 10px

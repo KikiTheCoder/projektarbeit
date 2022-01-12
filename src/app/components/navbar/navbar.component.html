@@ -1,0 +1,25 @@
+<nav id="navbar">
+  <div id="navcontent">
+    <ul id="navlist">
+      <li class="nav-link" id="rs-td-link">
+        <a href="https://rs-td.de" pRipple><i class="pi pi-arrow-left"></i> rs-td.de</a>
+      </li>
+
+      <li class="nav-link">
+        <a routerLink="" routerLinkActive="nav-link-active" [routerLinkActiveOptions]="{exact: true}" pRipple><i class="pi pi-home"></i> Startseite</a>
+      </li>
+
+      <li class="nav-link float-right" id="langbtn">
+        <a (click)="langoverlay.toggle($event)"><i class="pi pi-globe"></i></a>
+      </li>
+
+
+    </ul>
+
+    <p-overlayPanel #langoverlay>
+      <ng-template pTemplate>
+        <p-listbox [options]="langs" [(ngModel)]="selectedLang" optionLabel="name" (onChange)="updateLang()"></p-listbox>
+      </ng-template>
+  </p-overlayPanel>
+  </div>
+</nav>
