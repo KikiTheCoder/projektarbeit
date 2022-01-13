@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { TranslateService } from '@ngx-translate/core';
+import { LangService } from "../../services/lang.service"
 
 interface lang { name: string; code: string; }
 
@@ -14,16 +14,18 @@ export class NavbarComponent implements OnInit {
 
   selectedLang: lang;
 
-  constructor(public translate: TranslateService) {
-    this.langs = [{ name: "English", code: "en" }, { name: "Deutsch", code: "de" }, { name: "Română", code: "ro" }];
-  }
-
-  updateLang() {
-    this.translate.use(this.selectedLang.code)
-
+  constructor(public lang: LangService) {
+    this.langs = lang.langs
   }
 
   ngOnInit(): void {
+    this.selectedLang = this.lang.selectedLang
+    console.log(this.selectedLang);
+
+  }
+
+  updateLang() {
+    this.lang.updateLang(this.selectedLang)
   }
 
 }
