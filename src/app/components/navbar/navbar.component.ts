@@ -1,7 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { LangService } from "../../services/lang.service"
-
-interface lang { name: string; code: string; }
+import { LangService, lang } from "../../services/lang.service"
 
 @Component({
   selector: 'app-navbar',
@@ -10,22 +8,8 @@ interface lang { name: string; code: string; }
 })
 export class NavbarComponent implements OnInit {
 
-  langs: lang[];
-
-  selectedLang: lang;
-
-  constructor(public lang: LangService) {
-    this.langs = lang.langs
+  constructor(public langservice: LangService) {
   }
 
-  ngOnInit(): void {
-    this.selectedLang = this.lang.selectedLang
-    console.log(this.selectedLang);
-
-  }
-
-  updateLang() {
-    this.lang.updateLang(this.selectedLang)
-  }
-
+  ngOnInit(): void { }
 }

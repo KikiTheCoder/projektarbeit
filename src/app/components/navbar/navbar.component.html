@@ -18,7 +18,7 @@
 
     <p-overlayPanel #langoverlay>
       <ng-template pTemplate>
-        <p-listbox [options]="langs" [(ngModel)]="selectedLang" optionLabel="name" (onChange)="updateLang()"></p-listbox>
+        <p-listbox [options]="this.langservice.langs" [(ngModel)]="this.langservice.selectedLang" optionLabel="name" (onChange)="this.langservice.updateLang(this.langservice.selectedLang)"></p-listbox>
       </ng-template>
   </p-overlayPanel>
   </div>

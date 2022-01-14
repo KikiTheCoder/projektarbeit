@@ -1,7 +1,7 @@
 import { Injectable } from '@angular/core';
 import { TranslateService } from '@ngx-translate/core';
 
-interface lang { name: string; code: string; }
+export interface lang { name: string; code: string; }
 
 
 @Injectable({
