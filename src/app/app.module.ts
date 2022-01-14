@@ -17,6 +17,7 @@ import { ScrollTopModule } from 'primeng/scrolltop';
 import { SelectButtonModule } from 'primeng/selectbutton';
 import { OverlayPanelModule } from 'primeng/overlaypanel';
 import { ListboxModule } from 'primeng/listbox';
+import {GMapModule} from 'primeng/gmap';
 
 import { PageHomeComponent } from './pages/page-home/page-home.component';
 import { PageNotFoundComponent } from './pages/page-not-found/page-not-found.component';
@@ -57,7 +58,8 @@ export function createTranslateLoader(http: HttpClient) {
     ScrollTopModule,
     SelectButtonModule,
     OverlayPanelModule,
-    ListboxModule
+    ListboxModule,
+    GMapModule
   ],
   providers: [],
   bootstrap: [AppComponent]
