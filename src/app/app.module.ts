@@ -17,13 +17,15 @@ import { ScrollTopModule } from 'primeng/scrolltop';
 import { SelectButtonModule } from 'primeng/selectbutton';
 import { OverlayPanelModule } from 'primeng/overlaypanel';
 import { ListboxModule } from 'primeng/listbox';
-import {GMapModule} from 'primeng/gmap';
+import { GMapModule } from 'primeng/gmap';
 
 import { PageHomeComponent } from './pages/page-home/page-home.component';
 import { PageNotFoundComponent } from './pages/page-not-found/page-not-found.component';
 import { NavbarComponent } from './components/navbar/navbar.component';
 import { FooterComponent } from './components/footer/footer.component';
 import { PageBerufskarteComponent } from './pages/page-berufskarte/page-berufskarte.component'
+
+import { LangService } from './services/lang.service';
 
 export function createTranslateLoader(http: HttpClient) {
   return new TranslateHttpLoader(http, './assets/i18n/', '.json');
@@ -61,7 +63,7 @@ export function createTranslateLoader(http: HttpClient) {
     ListboxModule,
     GMapModule
   ],
-  providers: [],
+  providers: [LangService],
   bootstrap: [AppComponent]
 })
 export class AppModule {
