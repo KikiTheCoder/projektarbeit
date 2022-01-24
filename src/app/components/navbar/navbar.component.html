@@ -1,18 +1,17 @@
 <nav id="navbar">
   <div id="navcontent">
+    <li class="nav-link float-left" id="rs-td-link">
+      <a href="https://rs-td.de" pRipple>Regelschule "Am Rennsteig"</a>
+    </li>
+
     <ul id="navlist">
-      <li class="nav-link" id="rs-td-link">
-        <a href="https://rs-td.de" pRipple><i class="pi pi-caret-left"></i>  Zurück</a>
-      </li>
-
       <li class="nav-link">
-        <a routerLink="" routerLinkActive="nav-link-active" [routerLinkActiveOptions]="{exact: true}" pRipple><i class="pi pi-home"></i> {{ 'nav_startpage' | translate}}</a>
+        <a routerLink="" routerLinkActive="nav-link-active" [routerLinkActiveOptions]="{exact: true}" pRipple>{{ 'nav_startpage' | translate}}</a>
       </li>
 
-      <li class="nav-link float-right" id="langbtn">
+      <li class="nav-link" id="langbtn">
         <a (click)="langoverlay.toggle($event)"><i class="pi pi-globe"></i></a>
       </li>
-
 
     </ul>
 
