@@ -8,6 +8,14 @@
       <li class="nav-link">
         <a routerLink="" routerLinkActive="nav-link-active" [routerLinkActiveOptions]="{exact: true}" pRipple>{{ 'nav_startpage' | translate}}</a>
       </li>
+      <li class="nav-link">
+        <a href="https://www.rs-td.de/berufsorientierung/kooperationspartner-praxistag/?L=0"  pRipple>{{ 'our_partners' | translate}}</a>
+      </li>
+      <li class="nav-link">
+        <a routerLink="berufskarte" routerLinkActive="nav-link-active" [routerLinkActiveOptions]="{exact: true}" pRipple>{{ 'to_job_map' | translate}}</a>
+      </li>
+
+
 
       <li class="nav-link" id="langbtn">
         <a (click)="langoverlay.toggle($event)"><i class="pi pi-globe"></i></a>
