@@ -1,17 +1,17 @@
 <nav id="navbar">
   <div id="navcontent">
-    <li class="nav-link float-left" id="rs-td-link">
+    <li class="nav-link float-left hidden md:block" id="rs-td-link">
       <a href="https://rs-td.de" pRipple>Regelschule "Am Rennsteig"</a>
     </li>
 
     <ul id="navlist">
-      <li class="nav-link">
+      <li class="nav-link hidden md:block">
         <a routerLink="" routerLinkActive="nav-link-active" [routerLinkActiveOptions]="{exact: true}" pRipple>{{ 'nav_startpage' | translate}}</a>
       </li>
-      <li class="nav-link">
+      <li class="nav-link  hidden md:block">
         <a href="https://www.rs-td.de/berufsorientierung/kooperationspartner-praxistag/?L=0"  pRipple>{{ 'our_partners' | translate}}</a>
       </li>
-      <li class="nav-link">
+      <li class="nav-link  hidden md:block">
         <a routerLink="berufskarte" routerLinkActive="nav-link-active" [routerLinkActiveOptions]="{exact: true}" pRipple>{{ 'to_job_map' | translate}}</a>
       </li>
 

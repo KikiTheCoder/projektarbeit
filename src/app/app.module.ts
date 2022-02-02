@@ -18,6 +18,7 @@ import { SelectButtonModule } from 'primeng/selectbutton';
 import { OverlayPanelModule } from 'primeng/overlaypanel';
 import { ListboxModule } from 'primeng/listbox';
 import { GMapModule } from 'primeng/gmap';
+import { CardModule} from 'primeng/card';
 
 import { PageHomeComponent } from './pages/page-home/page-home.component';
 import { PageNotFoundComponent } from './pages/page-not-found/page-not-found.component';
@@ -61,7 +62,8 @@ export function createTranslateLoader(http: HttpClient) {
     SelectButtonModule,
     OverlayPanelModule,
     ListboxModule,
-    GMapModule
+    GMapModule,
+    CardModule
   ],
   providers: [LangService],
   bootstrap: [AppComponent]
